@@ -1,0 +1,7 @@
+wget --no-check-certificate https://app.drakon.tech/gen/VFQOl8OYWRkw1j8aAvLpftgNP3sCBne0/common_mod.js
+wget --no-check-certificate https://app.drakon.tech/gen/VFQOl8OYWRkw1j8aAvLpftgNP3sCBne0/html_mod.js
+wget --no-check-certificate https://app.drakon.tech/gen/VFQOl8OYWRkw1j8aAvLpftgNP3sCBne0/mdb_mod.js  
+wget --no-check-certificate https://app.drakon.tech/gen/VFQOl8OYWRkw1j8aAvLpftgNP3sCBne0/sm_mod.js  
+wget --no-check-certificate https://app.drakon.tech/gen/LamBTFAmRR8Nq60gyKh1BWOxTnviF3gB/canvas_mod.js
+wget --no-check-certificate https://app.drakon.tech/gen/LamBTFAmRR8Nq60gyKh1BWOxTnviF3gB/enne.js
+mv *.js static/js
