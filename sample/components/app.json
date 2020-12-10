@@ -1,0 +1,96 @@
+{
+    "handler": "Application",
+    "data": {
+        "current": null,
+        "screen": "",
+        "project": null,
+        "readonly": false
+    },
+    "children": {
+        "enne": {
+            "handler": "EnneEditor",
+            "data": {
+
+            },
+            "children": {
+                "header": {
+                    "handler": "Header",
+                    "uplink": {
+                        "app": "Application"
+                    }
+                }
+            },
+            "name": {
+                "handler": "LargeEdit"
+            },
+            "description": {
+                "handler": "Edit"
+            },
+            "jup": {
+                "handler": "CanvasEdit"
+            },
+            "ven": {
+                "handler": "CanvasEdit"
+            },
+            "canvas": {
+                "handler": "Canvas"
+            },
+            "undo": {
+                "handler": "IconButton",
+                "data": {
+                    "icon": "undo",
+                    "command": "undo"
+                }
+            },
+            "redo": {
+                "handler": "IconButton",
+                "data": {
+                    "icon": "redo",
+                    "command": "redo"
+                }
+            }            
+        },
+        "explorer": {
+            "handler": "Explorer",
+            "data": {
+                "items": [],
+                "current": -1
+            },
+            "children": {
+                "header": {
+                    "handler": "Header",
+                    "uplink": {
+                        "app": "Application"
+                    }
+                },
+                "grid": {
+                    "type": "array",
+                    "handler": "GridItem",
+                    "data": {
+                        "type": "",
+                        "text": ""
+                    }
+                }
+            } 
+
+        },
+        "account": {
+
+        },
+        "logon": {
+
+        },
+        "register": {
+
+        },
+        "loading": {
+
+        },
+        "panic": {
+
+        },
+        "saver": {
+
+        }
+    }
+}

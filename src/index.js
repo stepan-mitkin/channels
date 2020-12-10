@@ -55,7 +55,7 @@ function logException(ex, info) {
 
 app.use(express.json())
 
-app.use('/enne/static', express.static(globals.config.staticPath))
+app.use('/channels/static', express.static(globals.config.staticPath))
 
 
 let editorPage
