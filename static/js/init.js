@@ -1,6 +1,8 @@
 (function() {
     var schema = {
-        "handler": "Application",
+        "builder": "Application",
+        "input": ["createDom"],
+        "capsule": true,
         "data": {
             "current": null,
             "screen": "",
@@ -29,24 +31,15 @@
         }
     }
 
-    var createDom = function(node, parentElement) {
-        return node.createDom(parentElement)
-    }
-
-    var run = function(node) {
-        node.run()
-    }
 
     var common = common_mod()
     var sm = sm_mod();
     var html = html_mod();
-    var pyramid = pyramid_mod();
-    var enne2 = enne2_mod(common, sm, html)
-    var app = pyramid.build(schema, enne2)
-    pyramid.traverse(app, run)
-    var main = html.get("main")
-    main.innerHTML = ""
+    var pyramid = pyramid_mod(common);
+    var enne2 = enne2_mod(common, sm, html, pyramid)
 
-    pyramid.traverse(app, createDom, main)
-    //app.run()
+    var app = enne2.create(schema)
+    var main = html.get("main")
+    html.clear(main)
+    app.createDom(main)
 })();
