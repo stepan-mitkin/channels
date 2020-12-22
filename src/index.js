@@ -72,6 +72,8 @@ if (env === "debug") {
 
 
 app.use('/channels/doc/:docId', express.static(editorPage))
+app.use('/channels/logon', express.static(editorPage))
+app.use('/channels/auth', express.static(editorPage))
 app.use('/channels', express.static(editorPage))
 
 app.listen(globals.config.port, () => {
